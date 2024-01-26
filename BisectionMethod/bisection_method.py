@@ -48,7 +48,7 @@ for i in range(50):
     if (r1==r2):
         print("we find the exact root")
         break
-
+print("Final root : ",r1)
 
 # In[ ]:
 
