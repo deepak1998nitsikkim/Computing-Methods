@@ -1,1 +1,37 @@
+BISECTION METHOD
 
+Steps to find the nearest approximate root of the problem
+
+1. consider two roots, one which gives negative result and other gives positive result
+    r1 = 2, r2 = 3 
+    
+    Let our function is defind as below in line 9-10
+    bis(x):
+      return x**3-2*x-5
+
+2. Find the result for r1 and r2
+    f1 = bis(r1) // gives negative result
+    f2 = bis(r2) // gives positive result
+
+
+  3. Create a loop till we find our desired result as from line 18 - 
+      for i in range(50):
+
+      4. Display roots
+          print("roots : ", r1," , ",r2)
+
+      5. Find the average of previous roots r1 and r2
+            a = (r1+r2)/2 // average of roots
+            b = bis(a) // result of averaged root
+        
+        6. Check if result of averaged root is less than zero and greater than previous result f1 as
+            if (b<0) and (b>f1):
+              r1 = a
+      
+        7. If result of averaged root is greater than zero and less than f2 as
+            if (b>0) and (b<f2):
+              r2 = a
+        8. if r1 and r2 are equal, then we finally conclude our result as
+            if r1==r2:
+              print("terminate here")
+              break
